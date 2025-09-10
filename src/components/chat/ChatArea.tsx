@@ -29,7 +29,7 @@ export default function ChatArea() {
       timestamp: new Date(),
     },
     {
-      id: "2", 
+      id: "2",
       text: "Hi,\n\nKindly quote for the following hotel:\n\nNo. of adults - 12\nCity - Delhi\n\nHotel - Novotel Aerocity",
       isUser: true,
       timestamp: new Date(),
@@ -64,10 +64,10 @@ export default function ChatArea() {
         isUser: true,
         timestamp: new Date(),
       };
-      
-      setMessages(prev => [...prev, newUserMessage]);
+
+      setMessages((prev) => [...prev, newUserMessage]);
       setInputText("");
-      
+
       // Simulate AI response after a short delay
       setTimeout(() => {
         const aiResponse: Message = {
@@ -76,13 +76,13 @@ export default function ChatArea() {
           isUser: false,
           timestamp: new Date(),
         };
-        setMessages(prev => [...prev, aiResponse]);
+        setMessages((prev) => [...prev, aiResponse]);
       }, 1000);
     }
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
+    if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
       handleSendMessage();
     }
@@ -116,7 +116,7 @@ export default function ChatArea() {
       </div>
 
       {/* Chat Messages */}
-      <div 
+      <div
         ref={chatContainerRef}
         className="bg-[var(--whatsapp-bg)] border-l border-[var(--whatsapp-border)] p-4 flex-1 flex flex-col overflow-y-auto"
       >
@@ -144,13 +144,16 @@ export default function ChatArea() {
                     <p className="text-[var(--whatsapp-text)] whitespace-pre-wrap">
                       {message.text.includes("Rates") ? (
                         <>
-                          <span className="text-[var(--whatsapp-text)]">Your </span>
+                          <span className="text-[var(--whatsapp-text)]">
+                            Your{" "}
+                          </span>
                           <span className="text-[var(--whatsapp-primary)] font-semibold underline">
                             Rates
                           </span>
                           <span className="text-[var(--whatsapp-text)]">
                             {" "}
-                            are ready! 🎯 Let me know if you need any adjustments.
+                            are ready! 🎯 Let me know if you need any
+                            adjustments.
                           </span>
                         </>
                       ) : (
@@ -203,7 +206,7 @@ export default function ChatArea() {
               </div>
             </div>
 
-            <Button 
+            <Button
               onClick={handleSendMessage}
               className="bg-[var(--whatsapp-primary)] hover:bg-[var(--whatsapp-primary)]/90 rounded-full w-10 h-10 p-0"
             >

@@ -16,9 +16,9 @@ export default function Home() {
         {/* Header 2 - Sub Navigation */}
         <SubNavigation />
 
-        {/* Main Content Area - frame-48095895 */}
+        {/* Main Content Area  */}
         <div className="flex flex-col gap-2.5 items-start justify-start flex-shrink-0 w-[88.5rem] h-[851px]">
-          {/* Header 3 - Chat Section Header (frame-32) */}
+          {/* Header 3 - Chat Section Header  */}
           <div className="bg-[#fafafa] border border-[#e0e0e0] rounded-t-lg p-4 flex items-center justify-start flex-wrap content-center gap-2.5 overflow-hidden flex-shrink-0 w-full">
             <div className="text-[#1f1f1f] font-medium text-xl flex-1 flex items-center justify-start">
               Live Chat
@@ -43,7 +43,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Main Content Layout - frame-48095896 */}
+          {/* Main Content Layout  */}
           <div className="flex gap-0 items-start justify-start w-full flex-1 overflow-hidden border border-b-2 mb-[50px]">
             {/* Chat Sidebar */}
             <ChatSidebar />

@@ -1,4 +1,5 @@
 import React from "react";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 const chatUsers = [
   { name: "Ritik", message: "You pinned a message", time: "yesterday" },
@@ -37,10 +38,11 @@ export default function ChatSidebar() {
         {chatUsers.map((user, index) => (
           <div key={index} className="flex items-center w-full">
             <div className="px-3 py-3 flex items-center">
-              <div className="w-12 h-12 relative">
-                <div className="w-full h-full absolute bg-gray-300 rounded-full"></div>
-                <div className="w-8 h-9 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-gray-400 rounded-sm"></div>
-              </div>
+              <Avatar className="w-12 h-12">
+                <AvatarFallback className="bg-gray-200 text-gray-600 text-lg font-medium">
+                  {user.name.charAt(0)}
+                </AvatarFallback>
+              </Avatar>
             </div>
             <div className="border-t border-[#e9edef] pr-3 py-3 flex-1 flex flex-col">
               <div className="flex items-start justify-between">
